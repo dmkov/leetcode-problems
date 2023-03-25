@@ -4,17 +4,15 @@ March 2023:
 20 - 26, 121, 350
 21 - 345, 347, 100, 572, 844
 23 - 496, 232, 35, 14
+24 - 278, 209
 
 
 
-medium - 122, 443, 204, 11
+medium - 122, 443, 204, 11, 530
 
 
 
 
 Done with help:
-XXX - 
-
-
-What was learned:
-YYY - 
+278 - In the binary search, the bounder should move to mid (not mid - 1) if we would like to include the index in the response
+209 - Check the boundaries for left and right pointers with the array iteration
