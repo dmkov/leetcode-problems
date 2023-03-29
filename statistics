@@ -7,6 +7,7 @@ March 2023:
 24 - 278, 209
 25 - 219
 27 - 1, 605, 88, 49, 438
+29 - 125, 20, 976, 21, 13
 
 
 medium - 122, 443, 204, 11, 530
@@ -17,3 +18,6 @@ medium - 122, 443, 204, 11, 530
 Done with help:
 278 - In the binary search, the bounder should move to mid (not mid - 1) if we would like to include the index in the response
 209 - Check the boundaries for left and right pointers with the array iteration
+125 - Did not check alphanumeric part in the valid palindrome. manual implementation toLowerCase() is difficult
+976 - Use sorting to maximise sum of elements in the array to get combination of numbers
+13  - Iterating array or string from left to right, check what would be an approach iterating from right to left
