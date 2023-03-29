@@ -7,7 +7,7 @@ March 2023:
 24 - 278, 209
 25 - 219
 27 - 1, 605, 88, 49, 438
-29 - 125, 20, 976, 21, 13
+29 - 125, 20, 976, 21, 13, 560
 
 
 medium - 122, 443, 204, 11, 530
@@ -21,3 +21,4 @@ Done with help:
 125 - Did not check alphanumeric part in the valid palindrome. manual implementation toLowerCase() is difficult
 976 - Use sorting to maximise sum of elements in the array to get combination of numbers
 13  - Iterating array or string from left to right, check what would be an approach iterating from right to left
+560 - Using presum can be used to get the contigues subarrays sums
