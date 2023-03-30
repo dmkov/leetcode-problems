@@ -20,6 +20,13 @@
 ## Data Structures
 | # | Title | Description | Basic idea |
 |---| ----- | -------- | --------------------- |
+## Dynamic Programming
+| # | Title | Description | Basic idea |
+|---| ----- | -------- | --------------------- |
+| 70 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)<br>(easy) | Climbing a staircase, it takes n steps to reach the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top? | DP: To every step we can come either from the previous stair or from one before the previous. In this case the sum of options will be n[i] = n[i-1] + n[i-2]. Iterate over array and populate values. O(n) + O(n)|
+## Data Structures
+| # | Title | Description | Basic idea |
+|---| ----- | -------- | --------------------- |
 
 ## Hash Tables
 | # | Title | Description | Basic idea |
@@ -39,13 +46,13 @@
 | 496 | [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/)<br>(easy) | Given two arrays, for every number from the first array find the next greater element in the second array (some greater element that is to the right of x in the same array). If there is no next greater element, then the answer is -1. | Stack:<br>1. Iterate the second array from right to left.<br>2. Pop all numbers from the stack smaller than the current element. Answer would be peek element or -1 if stack is empty. O(n) + O(n).|
 | 232 | [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks)<br>(easy) | Implement a first in first out (FIFO) queue using only two stacks. The implemented queue should support push, peek, pop, and empty operations. | Perform pop()/peek() and push() to different stacks:<br>1. With every push - add element to the 1st stack, with every pop() - take element from the 2nd.<br>2. When the 2nd is empty - reverse elements from 1st to it. O(1) amortized.|
 | 20 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses)<br>(easy) | Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid. | Stack: Iterate over the string, add to stack every open parentheses. For every closed - pop element from the stack and check if they are of the same parentheses type. O(n) + O()n |
+| 844 | [Backspace String Compare](https://leetcode.com/problems/backspace-string-compare/)<br>(easy) | Given two strings, return true if they are equal when both are typed into empty text editors. '#' means a backspace character. | Stack:<br>1. Iterate both strings and add characters to the stack. With "#" pop the last element from the stack. At the end compare content. O(n) + O(n).<br>Java StringBuilder for more clean code|
 
 ## Strings
 | # | Title | Description | Basic idea |
 |---| ----- | -------- | --------------------- |
 | 345 | [Reverse Vowels of a String](https://leetcode.com/problems/reverse-vowels-of-a-string/)<br>(easy) | Given a string, reverse only all the vowels ('a', 'e', 'i', 'o', and 'u') in the string and return it. | Two pointers:<br>1. Moving from left and right to the center, when both pointers find a vowel, swap values. O(n) + O(n) |
 | 13 | [Roman to Integer](https://leetcode.com/problems/roman-to-integer)<br>(easy) | Given a roman numeral, convert it to an integer with described rules. | Left to right: Map element with the integer and always check the next element. If the combination is possible, then consider them together as greater-smaller and skip one counter, if not - just add the current element.<br>Right to left: Every time the trend increases - add it to the sum, with decresing - substract number from the total. O(n) + O(1). |
-| 844 | [Backspace String Compare](https://leetcode.com/problems/backspace-string-compare/)<br>(easy) | Given two strings, return true if they are equal when both are typed into empty text editors. '#' means a backspace character. | Stack:<br>1. Iterate both strings and add characters to the stack. With "#" pop the last element from the stack. At the end compare content. O(n) + O(n).<br>Java StringBuilder for more clean code|
 | 14 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix)<br>(easy) | Write a function to find the longest common prefix string amongst an array of strings. | Scanning: Iterate first string and check char in all other words - O(n\*m) O(n) <br>Divide&Conquer: Recursively split array and find common prefix in smaller groups - O(n*m) O(mlogn)|
 | 438 | [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string)<br>(medium) | Given two strings s and p, return an array of all the start indices of p's anagrams in s. | Hashmap or char array: compute char hash with int[26] for the searched word and compare hashes using sliding window by adding and removing one character every time () O(n * 26))<br>Counter and two cursors: Hard to implement. Shift char array for number of characters from searched string. With every match to 0, decrease counter of changes, with every new character - increase it. Every time when counter is 0 (no shifts), add index to the result. O(n)|
 | 125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome)<br>(easy, two pointers) | Check if it is a palindrome (after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward). | Two pointers: Move from left and right sides, compare characters. If they are equal - reduce the window, if not - return false. Be careful with lower case and alphanumeric edge cases O(n) + O(1)|
@@ -55,5 +62,6 @@
 | # | Title | Description | Basic idea |
 |---| ----- | -------- | --------------------- |
 | 100 | [Same Tree](https://leetcode.com/problems/same-tree/)<br>(easy) | Given the roots of two binary trees p and q, write a function to check if they are the same or not.| Recursion:<br>1. Check the current nodes, if they are null or equal, call the method recursively for left and right child nodes. O(n) + O(1) |
+| 94 | [94. Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)<br>(easy) | Given the root of a binary tree, return the inorder traversal of its nodes' values. | Recursion: Call the method and pass list by reference for each node. O(n) + O(n)<br>Stack: Traverse left node and add pointed elements to stack. When there are no left elements, pop item from stack and add to list. Set pointer to the right node. O(n) + O(n)<br>Morris Traversal: Modify stack by adding root to the most right element of the left node. Then set left node as root. If there are no left elements - add to list and traverse right. O(n) + O(1) |
 | 572 | [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/)<br>(easy) | Given the roots of two binary trees root and subRoot, check if the second is a subtree of the first with the same structure and node values. | Recursion:<br>1. Check the current values, if they are null or equal, call check if the rest of the trees are equal, otherwise call subtree method for the left and right child nodes. O(n) + O(1) |
 
