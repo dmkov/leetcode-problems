@@ -12,6 +12,8 @@
 | 437 | [Path Sum III](https://leetcode.com/problems/path-sum-iii)<br>(medium) | Given the root of a binary tree and an integer targetSum, return the number of paths where the sum of the values along the path equals targetSum. | Presum: For each element, compute presum and store it in the map {val:occur}. If current (presum-k) exists in the map, return the `occur` as the answer. At the end, cleanup the map with the value. O(n) + O(n) |
 | 66 | [Plus One](https://leetcode.com/problems/plus-one)<br>(easy, arithmetic) | Given a large integer represented as an integer array digits, increment the large integer by one and return the resulting array of digits. | Set n = 1. Iterate from right to left and add n to each number.<br>If result is 10, set number to 0 and n=1, otherwise n=0. At the end, if n is 1, copy array with shift to right. O(n) + O(1)|
 | 122 | [Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii)<br>(easy) | You are given an integer array prices. On each day, you may decide to buy and/or sell the stock. Find and return the maximum profit you can achieve. | Iterative: iterate over array and sum up deltas of all increases as a total profit. O(n) + O(1)|
+| 238 | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self)<br>(medium) | Given an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i]. | Presum: For every index in the array, compute presum and suffixsum, then iterate over array and multiple product before and after the active element. O(n) + O(n)|
+| 53 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray)<br>(medium) | Given an integer array nums, find the subarray with the largest sum, and return its sum. | Iterative: for every element we can either continue subarray sum or start a new sum with the selected element. Get the max then. O(n) + O(n)|
 
 ## Binary Search
 | # | Title | Description | Basic idea |
@@ -32,12 +34,13 @@
 | # | Title | Description | Basic idea |
 |---| ----- | -------- | --------------------- |
 
-## Hash Tables
+## Hash Tables / Sets
 | # | Title | Description | Basic idea |
 |---| ----- | -------- | --------------------- |
 | 219 | [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii)<br>(easy) | Given an integer array nums and an integer k, return true if there are two distinct nums[i] == nums[j] and abs(i - j) <= k. | Hashmap: Store index of the evelement as a value and the number itself as a key. If the number already exists, then check k and either update hashmap or return true. O(n) + O(n)|
 | 1 | [Two Sum](https://leetcode.com/problems/two-sum)<br>(easy) | Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. | Hashmap: check, if the required number is in the map, if not - store the current number with its index. Otherwise, return both stored and active indexes. O(n) + O(n)|
 | 49 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/)<br>(medium) | Given an array of strings strs, group the anagrams together. | Hashmap: Compute hash with characters from the string and use it as a key in the umbrella hashmap. Put all strings to the list there. To compute hash use int[26] or another hashmap O(n*s)|
+| 128 | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)<br>(medium) | Given an unsorted array of integers nums, return the length of the longest consecutive elements sequence. | Hashset: Add all numbers to the set. Iterate over set, for every element check if num-1 exists (left boundary). If yes - skip the current iteration, if not (beginning of strike) - iterate until the end and get the max of all intervals. O(n) + O(n)|
 
 ## Linked Lists
 | # | Title | Description | Basic idea |
