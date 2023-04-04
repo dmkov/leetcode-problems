@@ -14,6 +14,7 @@ March 2023 (37):
 April 2023:
 1 - 543
 2 - 110, 118, 437, 122, 238, 53, 128
+3 - 155, 1146
 
 
 medium - 443, 204, 11, 530
@@ -32,3 +33,4 @@ Done with help:
 67  - To get a result from binary sum, use mod (%) and integer part of division
 704 - Binary search for exact element left <= right and both pointers +/- 1. For upper/lower bound left = mid / right =mid
 226 - Tree can be traversed iteratevely with stack or queue
+1146- Red black tree can be used with the TreeMap (ceelingEntry, floorEntry)

@@ -22,17 +22,19 @@
 | 278 | [First Bad Version](https://leetcode.com/problems/first-bad-version)<br>(easy) | Suppose you have n versions [1, 2, ..., n] and you want to find out the first bad one, which causes all the following ones to be bad. You can call external API method for n. | Binary search: Divide search range by two using left and rigth boundaries with the element in the middle. O(logn)|
 | 35 | [Search Insert Position](https://leetcode.com/problems/search-insert-position)<br>(easy) | Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order. | Binary search:<br>1. Tricky part is to match use case when the number is not presented. It is possible to return left pointer always. O(logn)|
 | 704 | [Binary Search](https://leetcode.com/problems/binary-search)<br>(easy) | Given an array of integers which is sorted in ascending order, write a function to search target in nums. If target exists, then return its index, otherwise, return -1. | Binary search:<br>Pay attention left<=right, left = mid +1 and right = mid - 1 for exact index. For upper/lower bounds left = mid / right =mid O(logn)|
+| 1146 | [Snapshot Array](https://leetcode.com/problems/snapshot-array)<br>(medium) | Implement a SnapshotArray that supports: void set(index, val) sets the element at the given index to val, int snap() takes a snapshot of the array and returns the snap_id and int get(index, snap_id) returns the value at the given index, at the time we took the snapshot with the given snap_id. | Binary search:<br>Instead of storing full array, we will store only changes. For each index we will keep the TreeMap and will look for greatest smaller snap value for the selected index O(logS) + O(S)|
+
+
 ## Data Structures
 | # | Title | Description | Basic idea |
 |---| ----- | -------- | --------------------- |
+| 155 | [Min Stack](https://leetcode.com/problems/min-stack/)<br>(medium) | Design a stack that supports push, pop, top, and retrieving the minimum element in constant time. | Two stacks: Keep numbers in the main stack and separately track the min elements in the second stack. With every pop action, compare main element with the min stack and if the poped item is on top, remove it as well. Otherwise, leave the min as it is.<br>Two values: with every insert keep tracking the current min element and store pair of the number with min element to the stack/list. To get the min element then, check the value from the previous pair in the list. |
+
 ## Dynamic Programming
 | # | Title | Description | Basic idea |
 |---| ----- | -------- | --------------------- |
 | 70 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)<br>(easy) | Climbing a staircase, it takes n steps to reach the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top? | DP: To every step we can come either from the previous stair or from one before the previous. In this case the sum of options will be n[i] = n[i-1] + n[i-2]. Iterate over array and populate values. O(n) + O(n)|
 | 118 | [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/)<br>(easy) | Given an integer numRows, return the first numRows of Pascal's triangle where each number is the sum of the two numbers | DP: Each element can be computed by adding sum from the previous row. Iterate row by row and use precomputed values. O(n*n) - every element once|
-## Data Structures
-| # | Title | Description | Basic idea |
-|---| ----- | -------- | --------------------- |
 
 ## Hash Tables / Sets
 | # | Title | Description | Basic idea |
