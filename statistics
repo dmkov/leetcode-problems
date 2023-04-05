@@ -16,9 +16,7 @@ April 2023:
 2 - 110, 118, 437, 122, 238, 53, 128
 3 - 155, 1146
 4 - 443
-
-
-medium - 204, 11, 530
+5 - 204, 11, 530, 15
 
 
 
@@ -35,3 +33,6 @@ Done with help:
 704 - Binary search for exact element left <= right and both pointers +/- 1. For upper/lower bound left = mid / right =mid
 226 - Tree can be traversed iteratevely with stack or queue
 1146- Red black tree can be used with the TreeMap (ceelingEntry, floorEntry)
+204 - Bottom up approaches can be solved iteratevely or with precomputed arrays
+11  - When there is no negative numbers in the array, you can use two pointers to maximaze the result, sum or area
+530 - Recursion with inorder traverse and values can be an option using the class and private properties
