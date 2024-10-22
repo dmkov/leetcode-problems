@@ -34,6 +34,7 @@
 ## Strings
 | # | Title | Description | Basic idea |
 |---| ----- | -------- | --------------------- |
+| 1108 | [Defanging an IP Address](https://leetcode.com/problems/defanging-an-ip-address/)<br>(easy) | Update given ip address by replacing delimeter in it. | Iterate list:<br>1. Iterate over all characters, if the character is ".", then insert a new delimeter, otherwise copy a character to the new string. O(n) |
 
 ## Trees
 | # | Title | Description | Basic idea |
