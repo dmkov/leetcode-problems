@@ -35,7 +35,6 @@
 | # | Title | Description | Basic idea |
 |---| ----- | -------- | --------------------- |
 
-
 ## Trees
 | # | Title | Description | Basic idea |
 |---| ----- | -------- | --------------------- |
