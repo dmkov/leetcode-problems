@@ -6,6 +6,7 @@
 ## Binary Search
 | # | Title | Description | Basic idea |
 |---| ----- | -------- | --------------------- |
+| 81 | [Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)<br>(medium) | Given an array sorted but then rotated at unknown pivot index, try to find if the given number exist or not in the list. | Binary Search:<br>1. If start element is smaller than end, we can do a binary search<br>2. Until then, do a conquire and divine approach until you can do a search. O(logN) or O(N)? |
 
 ## Bitwise operation
 | # | Title | Description | Basic idea |
@@ -39,4 +40,7 @@
 ## Trees
 | # | Title | Description | Basic idea |
 |---| ----- | -------- | --------------------- |
+| 105 | [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)<br>(medium) | Given two interger arrays for preorder and inorder lists, construct a binary tree. | Divide and conquer:<br>1. Both lists have the same unique elements. First element of preorder list is always a root.<br>2. Find root in the inorder list and recursively call method for its left and right nodes.<br>3. Do not forget to pop the root from preorder for the next iteration. O(n) |
+| 173 | [Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/)<br>(medium) | Implement iterator over the binary search tree for inorder traversal. | Recursive:<br>1. During the initialization, put all left elements recursively to the stack.<br>2. With each next() call, pop element from stack and recursively put its right child and all left part of it into the stack.<br>3. For hasNext() check the size of the stack. O(n) |
 
+105. 
