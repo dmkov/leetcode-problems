@@ -2,7 +2,10 @@
 | # | Title | Description | Basic idea |
 |---| ----- | -------- | --------------------- |
 | 347 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)<br>(medium) | Given an array of integers, return the K most frequent elements. | Heap:<br>1. Count how many times each integer occurs in the list.<br>2. Get the top K elements using heapq.nlargest O(nlogK) |
+| 55 | [Jump Game](https://leetcode.com/problems/jump-game/)<br>(medium) | Given an array of transitions, check if you can get to the end with the available number of steps. | Modify array and iterate recusively:<br>1. For every index call recusive stack tree, if the index is visited, set it to negative<br>2. If the last index is greater than length - return true, otherwise false O(n)<br>Track the max available steps:<br>1. Iterate over array and if the next number of steps is bigger then available - update the current counter, otherwise just decrease counter<br>2. Return false if the counter is negative O(n) |
 
+
+. Jump Game
 ## Binary Search
 | # | Title | Description | Basic idea |
 |---| ----- | -------- | --------------------- |
@@ -13,8 +16,6 @@
 |---| ----- | -------- | --------------------- |
 | 1356 | [Sort Integers by The Number of 1 Bits](https://leetcode.com/problems/sort-integers-by-the-number-of-1-bits/description/)<br>(easy) | Given a list of numbers, sort it by the number of 1s in the binary representation. | Sort and right shift:<br>1. Create a map with number of 1s, use right shift with mask "1" until the number is 0<br>2. Use sort with a custom lambda and two fields. O(n) for map and O(logn) for sorting |
 
-
-1356. Sort Integers by The Number of 1 Bits
 
 ## Data Structures
 | # | Title | Description | Basic idea |
