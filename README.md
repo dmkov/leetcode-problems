@@ -40,6 +40,7 @@
 | # | Title | Description | Basic idea |
 |---| ----- | -------- | --------------------- |
 | 1108 | [Defanging an IP Address](https://leetcode.com/problems/defanging-an-ip-address/)<br>(easy) | Update given ip address by replacing delimeter. | Iterate string:<br>1. Iterate over all characters, if the character is ".", then insert a new delimeter, otherwise copy a character to the new string. O(n) |
+| 2109 | [Adding Spaces to a String](https://leetcode.com/problems/adding-spaces-to-a-string/)<br>(medium) | Given a string and array with indexes, insert spaces in the string at listed indexes. | Iterate string:<br>1. Keeping pointer at indexes array, iterate over string and construct a new one. If indexes of the char and spaces match - insert space to the new string. O(n) |
 
 ## Trees
 | # | Title | Description | Basic idea |
