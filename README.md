@@ -11,6 +11,10 @@
 ## Bitwise operation
 | # | Title | Description | Basic idea |
 |---| ----- | -------- | --------------------- |
+| 1356 | [Sort Integers by The Number of 1 Bits](https://leetcode.com/problems/sort-integers-by-the-number-of-1-bits/description/)<br>(easy) | Given a list of numbers, sort it by the number of 1s in the binary representation. | Sort and right shift:<br>1. Create a map with number of 1s, use right shift with mask "1" until the number is 0<br>2. Use sort with a custom lambda and two fields. O(n) for map and O(logn) for sorting |
+
+
+1356. Sort Integers by The Number of 1 Bits
 
 ## Data Structures
 | # | Title | Description | Basic idea |
@@ -42,5 +46,3 @@
 |---| ----- | -------- | --------------------- |
 | 105 | [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)<br>(medium) | Given two interger arrays for preorder and inorder lists, construct a binary tree. | Divide and conquer:<br>1. Both lists have the same unique elements. First element of preorder list is always a root.<br>2. Find root in the inorder list and recursively call method for its left and right nodes.<br>3. Do not forget to pop the root from preorder for the next iteration. O(n) |
 | 173 | [Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/)<br>(medium) | Implement iterator over the binary search tree for inorder traversal. | Recursive:<br>1. During the initialization, put all left elements recursively to the stack.<br>2. With each next() call, pop element from stack and recursively put its right child and all left part of it into the stack.<br>3. For hasNext() check the size of the stack. O(n) |
-
-105. 
